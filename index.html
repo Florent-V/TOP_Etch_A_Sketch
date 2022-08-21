@@ -9,11 +9,54 @@
     <title>Etch A Sketch</title>
 </head>
 <body>
+    <h1>Etch-a-sketch</h1>
 
-    <div id="grid">
-       
-       
+    <div id="container">
+
+        <div id="left">
+            <div id="control_panel">
+                <div>
+                    <input type="color" name="boxColor" id="boxColor" value="#000000">
+                    <label for="boxColor">Fill in Color</label> 
+                </div>
+                <div>
+                    <input type="color" name="backgroundColor" id="backgroundColor" value="#ffffff">
+                    <label for="backgroundColor">Background Color</label> 
+                </div>
+
+                <div>
+                    <input type="range" name="gridSize" id="gridSize" value="20" min="1" max="90">
+                    <p><span class="gridSizeValue"></span> x <span class="gridSizeValue"></span></p>
+                </div>
+                <button class="mode-btn" id="erase-btn" value="erase-btn">Eraser</button>
+                <button class="mode-btn" id="rainbow-btn" value="rainbow-btn">Rainbow Mode</button>
+                <button class="mode-btn" id="darker-btn" value="darker-btn">Darker Mode</button>
+                <button class="mode-btn" id="lighter-btn" value="lighter-btn">Lighter Mode</button>
+
+                <button class="btn" id="grid-btn">Toggle grid Line</button>
+                <button class="btn" id="clear-btn">Clear Grid</button>
+
+
+
+        
+
+            </div>
+        </div>
+
+
+        <div id="right">
+
+            
+
+        </div>
+
+
+
+
+
     </div>
+
+    
 
 
     <script src="script.js"></script>
