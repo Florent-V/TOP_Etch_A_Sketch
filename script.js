@@ -26,7 +26,7 @@ function createGrid(side) {
     let grid = document.createElement('div');
     grid.setAttribute("id", "grid");
     grid.style.backgroundColor = document.getElementById('backgroundColor').value;
-    document.getElementById('right').appendChild(grid);
+    document.getElementById('center').appendChild(grid);
     for (let i = 0; i < side*side; i++) {
         let elt = document.createElement('div');
         elt.classList.add('box');

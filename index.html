@@ -9,44 +9,45 @@
     <title>Etch A Sketch</title>
 </head>
 <body>
-    <h1>Etch-a-sketch</h1>
 
     <div id="container">
-
         <div id="left">
-            <div id="control_panel">
-                <div>
+            <div class="control_panel">
+                <div class="color-selector item">
                     <input type="color" name="boxColor" id="boxColor" value="#000000">
                     <label for="boxColor">Fill in Color</label> 
                 </div>
-                <div>
+                <div class="color-selector item">
                     <input type="color" name="backgroundColor" id="backgroundColor" value="#ffffff">
                     <label for="backgroundColor">Background Color</label> 
                 </div>
-
-                <div>
+                <div class="size-selector item">
                     <input type="range" name="gridSize" id="gridSize" value="20" min="1" max="90">
                     <p><span class="gridSizeValue"></span> x <span class="gridSizeValue"></span></p>
                 </div>
-                <button class="mode-btn" id="erase-btn" value="erase-btn">Eraser</button>
-                <button class="mode-btn" id="rainbow-btn" value="rainbow-btn">Rainbow Mode</button>
-                <button class="mode-btn" id="darker-btn" value="darker-btn">Darker Mode</button>
-                <button class="mode-btn" id="lighter-btn" value="lighter-btn">Lighter Mode</button>
-
-                <button class="btn" id="grid-btn">Toggle grid Line</button>
-                <button class="btn" id="clear-btn">Clear Grid</button>
-
-
-
-        
-
+                <button class="btn item" id="grid-btn">Toggle grid Line</button>
+                <button class="btn item" id="clear-btn">Clear Grid</button>
             </div>
         </div>
 
 
-        <div id="right">
+        <div id="center">
+            <header>
+                <h1>Etch-a-sketch</h1>
+            </header>
 
-            
+        </div>
+
+        <div id="right">
+            <div class="control_panel">
+                
+                <button class="mode-btn item" id="erase-btn" value="erase-btn">Eraser</button>
+                <button class="mode-btn item" id="rainbow-btn" value="rainbow-btn">Rainbow Mode</button>
+                <button class="mode-btn item" id="darker-btn" value="darker-btn">Darker Mode</button>
+                <button class="mode-btn item" id="lighter-btn" value="lighter-btn">Lighter Mode</button>
+
+               
+            </div>
 
         </div>
 
@@ -56,7 +57,6 @@
 
     </div>
 
-    
 
 
     <script src="script.js"></script>

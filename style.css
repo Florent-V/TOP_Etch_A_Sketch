@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root
+{
+    --color1: #0b698b;
+    --color2: #0696a6;
+    --color3: #9cd3d8;
+    --color4: #f2f2f2;
+}
+
 *
 {
     box-sizing: border-box;
@@ -7,76 +17,121 @@
 
 body
 {
-    background-color: #503d3f;
+    background-color: var(--color1);
+    font-family: Rubik, sans-serif;
 }
 /*#############################################*/
 /*                SQUELETTE                    */
 /*#############################################*/
 
-h1{
+header
+{
+    display: flex;
+    height: 15vh;
+    align-items: center;
+}
+
+h1
+{
     font-size: 3rem;
-    height: 10vh;
-    text-align: center;
+    color: var(--color4);
 }
 
 #container
 {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     border: 2px solid red;
 }
 
-#right 
+#center 
 {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+#left, #right {
     flex: 1;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
-  
-#left {
-    background-color: green;
-    flex: 1;
-    height: 100%;
+
+#left
+{
+    justify-content: flex-end;
+}
+
+#right
+{
+    justify-content: flex-start;
+}
+
+/*#############################################*/
+/*                CONTROL PANLES               */
+/*#############################################*/
+
+.control_panel
+{
+    width: 290px;
+    height: min(300px, 100vh);
+    background-color: var(--color2);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.item
+{
+    margin-bottom: 0.5rem;;
+}
+
+.color-selector
+{
     display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
-#right, #left
+.color-selector input
 {
-    border: 1px solid yellow;
-}
-/*#############################################*/
-/*                      LEFT                   */
-/*#############################################*/
-
-
-/* CONTROL PANEL */
-#control_panel
-{
-    margin: auto;
-    width: 200px;
-    height: 500px;
-    background-color: azure;
+    border: 1px solid var(--color4);
+    height: 2rem;
 }
 
+.size-selector input{
+    width: 100%;
+}
+
+.size-selector{
+    text-align: center;
+    margin: 2rem 0;
+}
 .mode-btn, .btn
 {
     display: block;
-    background-color: black;
-    color: white;
-    width: 80%;
+    color: var(--color4);
+    width: 100%;
     height: 2rem;
+    border: 2px solid var(--color4);
+    background-color: var(--color2);
+    font-weight: 600;
 }
 
 .btn-selected, .btn:active
 {
-    background-color: white;
-    color: black;
+    background-color: var(--color4);
+    color: var(--color2);
 }
 
+
+
+
 /*#############################################*/
-/*                      RIGHT                  */
+/*                    CENTER                   */
 /*#############################################*/
 
 /* SKETCH GRID */ 
@@ -84,7 +139,8 @@ h1{
 {
     width : min(45vw, 80vh);
     aspect-ratio: 1 / 1;
-    border: 10px solid red;
+    border: 2rem solid var(--color2);
+    border-radius: 0.5rem;
     display: grid;
     background-color: #fff;
 }
